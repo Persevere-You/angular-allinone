@@ -3,7 +3,7 @@
       <mat-spinner *ngIf="isLoading"></mat-spinner>
     </div>
     <h2>
-      <div style="text-align:center">英雄列表</div>
+      <div style="text-align:center">土豪列表</div>
     </h2>
   
     <div class="mat-elevation-z4">
@@ -25,7 +25,7 @@
           <mat-cell *matCellDef="let row"> {{row.description}} </mat-cell>
         </ng-container>
         <ng-container matColumnDef="isTop">
-          <mat-header-cell *matHeaderCellDef> 顶级英雄 </mat-header-cell>
+          <mat-header-cell *matHeaderCellDef> 互联网大佬 </mat-header-cell>
           <mat-cell *matCellDef="let row"> {{row.isTop?'是':'否'}} </mat-cell>
         </ng-container>
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

@@ -3,7 +3,7 @@
       <mat-spinner *ngIf="isLoading"></mat-spinner>
     </div>
     <h2>
-      <div style="text-align: center;">编辑英雄</div>
+      <div style="text-align: center;">修改土豪</div>
     </h2>
   
     <mat-card class="card">
@@ -18,7 +18,7 @@
           </mat-error>
         </mat-form-field>
         <mat-form-field class="full-width">
-          <input matInput placeholder="英雄姓名" formControlName="name"
+          <input matInput placeholder="土豪姓名" formControlName="name"
                  required [errorStateMatcher]="matcher">
           <mat-error>
             <span *ngIf="!heroForm.get('name').valid && heroForm.get('name').touched">
@@ -34,7 +34,7 @@
         </mat-form-field>
         <!-- 不能使用form-field包含checkbox!! -->
         <div class="full-width">
-          <mat-checkbox formControlName="isTop" color="primary">顶级英雄?</mat-checkbox>
+          <mat-checkbox formControlName="isTop" color="primary">互联网大佬?</mat-checkbox>
         </div>
         <div style="text-align: center;">
           <span class="flat-button">

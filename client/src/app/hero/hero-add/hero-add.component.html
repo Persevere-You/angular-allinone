@@ -3,7 +3,7 @@
       <mat-spinner *ngIf="isLoading"></mat-spinner>
     </div>
     <h2>
-      <div style="text-align: center;">添加英雄</div>
+      <div style="text-align: center;">添加土豪</div>
     </h2>
     <mat-card class="card">
       <form [formGroup]="heroForm" (ngSubmit)="onFormSubmit()">
@@ -14,7 +14,7 @@
           </mat-error>
         </mat-form-field>
         <mat-form-field class="full-width">
-          <input matInput placeholder="英雄姓名" formControlName="name" required [errorStateMatcher]="matcher">
+          <input matInput placeholder="土豪姓名" formControlName="name" required [errorStateMatcher]="matcher">
           <mat-error>
             <span *ngIf="!heroForm.get('name').valid && heroForm.get('name').touched">英雄请留名</span>
           </mat-error>
@@ -27,17 +27,17 @@
         </mat-form-field>
         <!-- 不能使用form-field包含checkbox!! -->
         <div class="full-width">
-          <mat-checkbox formControlName="isTop" color="primary">顶级英雄?</mat-checkbox>
+          <mat-checkbox formControlName="isTop" color="primary">互联网大佬?</mat-checkbox>
         </div>
         <div style="text-align: center;">
           <span class="flat-button">
-            <button type="submit" [disabled]="!heroForm.valid" mat-raised-button color="primary" matTooltip="保存英雄">
-              <mat-icon>save</mat-icon>保 存
+            <button type="submit" [disabled]="!heroForm.valid" mat-raised-button color="primary" matTooltip="留下大佬">
+              <mat-icon>save</mat-icon>留下他
             </button>
           </span>
           <span class="flat-button">
             <a mat-raised-button color="warn" matTooltip="放弃" (click)="goBack()">
-              <mat-icon>transit_enterexit</mat-icon>放 弃
+              <mat-icon>transit_enterexit</mat-icon>他不是
             </a>
           </span>
         </div>
